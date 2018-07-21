@@ -31,7 +31,7 @@ let getAllData_By_Title = () => {
         type: 'GET', // request type GET, POST, PUT
         dataType: 'json', // requesting datatype
         async: true,
-        url: 'http://www.omdbapi.com/?apikey=1c03a0ec&t=' + search + '&y=' + year, // URL of getting data
+        url: 'https://www.omdbapi.com/?apikey=1c03a0ec&t=' + search + '&y=' + year, // URL of getting data
 
         success: (data) => { // in case of success data
             
@@ -125,7 +125,7 @@ let getAllData_By_ID = () => {
         type: 'GET', // request type GET, POST, PUT
         dataType: 'json', // requesting datatype
         async: true,
-        url: 'http://www.omdbapi.com/?apikey=1c03a0ec&i=' + search, // URL of getting data
+        url: 'https://www.omdbapi.com/?apikey=1c03a0ec&i=' + search, // URL of getting data
 
         success: (data) => { // in case of success data
 
