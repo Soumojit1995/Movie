@@ -113,7 +113,7 @@ let getAllData_By_Title = () => {
             //alert("some error occured")
 
         },
-        timeout: 3000
+        
 
     }); // end of AJAX request
 
@@ -192,6 +192,6 @@ let getAllData_By_ID = () => {
             //alert("some error occured")
 
         },
-        timeout: 3000
+       
     }); // end of AJAX request
 } // end of getAllData
