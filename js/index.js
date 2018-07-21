@@ -180,18 +180,7 @@ let getAllData_By_ID = () => {
             }
 
         },
-        error: (data) => { // in case of error data
-            $('#dataSection').css('display', 'none');
-            
-            $("#upper-div").text("some error occured").css("display", "block");
-           
-            //Result will show only 3 sec
-            setTimeout(function () {
-                $("#upper-div").css("display", "none");
-            }, 3000);
-            //alert("some error occured")
-
-        },
+       
        
     }); // end of AJAX request
 } // end of getAllData
