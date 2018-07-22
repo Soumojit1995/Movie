@@ -49,6 +49,7 @@ let getAllData_By_Title = () => {
             if (a == true)
 
             {
+                let poster=data.Poster;
                 $("#upper-div-success").css("display", "block");
                 
                 //Result will show only 3 sec
@@ -57,7 +58,12 @@ let getAllData_By_Title = () => {
                 }, 3000);
 
                 $('#dataSection').css("display", "block");
-                $('#moviePoster').html('<img src="' + data.Poster + '" class="img-fluid profileHeight"/>');
+                if(poster=="N/A"){
+                    $('#moviePoster').html('<img src="poster_not_available.png" class="img-fluid profileHeight"/>');
+                }
+                else{
+                    $('#moviePoster').html('<img src="' + data.Poster + '" class="img-fluid profileHeight"/>');
+                }
                 $('#movieTitle').text(data.Title);
                 $('#movieYear').text(data.Year);
                 $('#movieRated').text(data.Rated);
@@ -135,14 +141,22 @@ let getAllData_By_ID = () => {
             if (v == search)
 
             {
+                let poster=data.Poster;
                 $("#upper-div-success").css("display", "block");
                 //Result will show only 3 sec
                 setTimeout(function () {
                     $("#upper-div-success").css("display", "none");
                 }, 3000);
 
+                if(poster=="N/A"){
+                    $('#moviePoster').html('<img src="poster_not_available.png" class="img-fluid profileHeight"/>');
+                }
+                else{
+                    $('#moviePoster').html('<img src="' + data.Poster + '" class="img-fluid profileHeight"/>');
+                }
+
                 $('#dataSection').css("display", "block");
-                $('#moviePoster').html('<img src="' + data.Poster + '" class="img-fluid profileHeight"/>');
+               
                 $('#movieTitle').text(data.Title);
                 $('#movieYear').text(data.Year);
                 $('#movieRated').text(data.Rated);
